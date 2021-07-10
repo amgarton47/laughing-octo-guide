@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -w"
+    "start:dev": "npm run start-server & npm run build",
+    "start-server": "nodemon server/app.js --ignore public",
+    "build": "webpack -w",
+    "start": "npm run start:dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +18,13 @@
     "webpack-cli": "^4.7.2"
   },
   "dependencies": {
-    "mapbox-gl": "^2.3.1"
+    "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
+    "chalk": "^4.1.1",
+    "express": "^4.17.1",
+    "mapbox-gl": "^2.3.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.5"
   }
 }

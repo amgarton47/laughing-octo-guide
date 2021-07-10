@@ -6,13 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Trip Planner</title>
-    <script src="./bundle.js"></script>
+    <title>Landmarks of the 5Cs</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./bundle.js"></script>
 </head>
 
 <body>
-    <div id="map"></div>
+    <header>
+        <h1>Landmarks of the 5Cs</h1>
+    </header>
+    <div id="app">
+        <div id="map"></div>
+        <div class="form-popup">
+            <div class="popup-inner">
+                <h3>
+                    Landmark Name:<input type="text" class="text-input" id="marker-input-box">
+                </h3>
+                <h3>Coordinates:</h3>
+                <div>
+                    [<input type="text" placeholder="(-180, 180)" class="text-input" id="lat">,
+                    <input type="text" placeholder="(-90, 90)" class="text-input" id="long">]
+                </div>
+
+                <label for="colleges">
+                    <h3>College:</h3>
+                </label>
+
+                <select name="colleges" id="college-selector">
+                    <option value="Pomona">Pomona</option>
+                    <option value="Harvey Mudd">Harvey Mudd</option>
+                    <option value="Scripps">Scripps</option>
+                    <option value="Pitzer">Pitzer</option>
+                    <option value="CMC">CMC</option>
+                </select>
+
+
+                <button type="button" class="btn btn-primary">Enter</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

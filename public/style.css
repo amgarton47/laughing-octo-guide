@@ -5,5 +5,49 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #c1b5ad;
+}
+
+h3 {
+  margin: 5px;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 0 0.5rem;
+  background-color: gray;
+  color: #a8c9dd;
+  justify-content: center;
+}
+
+#app {
+  display: flex;
+}
+
+#map {
+  height: calc(100vh - 3rem);
+  width: 100vw;
+  flex: 2;
+  overflow: hidden;
+}
+
+.text-input {
+  margin: 5px;
+  font-size: 12pt;
+}
+
+.form-popup {
+  width: 400px;
+}
+
+.popup-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 5px;
 }
