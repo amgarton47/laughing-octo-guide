@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "npm run start-server & npm run build",
+    "seed": "node server/seed.js",
     "start-server": "nodemon server/app.js --ignore public",
     "build": "webpack -w",
     "start": "npm run start:dev",

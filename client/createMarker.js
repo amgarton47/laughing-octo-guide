@@ -1,14 +1,34 @@
 import mapboxgl from "mapbox-gl";
 
 const schoolColors = {
-  pomona: "#20438f",
-  pitzer: "#F7941D",
-  scripps: "#2b493e",
-  cmc: "#74001C",
-  mudd: "#eaaa00",
+  "Pomona College": "#20438f",
+  "Pitzer College": "#F7941D",
+  "Scripps College": "#2b493e",
+  "Claremont McKenna College": "#74001C",
+  "Harvey Mudd College": "#eaaa00",
 };
 
-export default (coordinates, college) =>
-  new mapboxgl.Marker({
+export default (coordinates, college, name) => {
+  let m = new mapboxgl.Marker({
     color: schoolColors[college],
-  }).setLngLat(coordinates);
+  });
+
+  const label = document.createElement("p");
+  label.innerHTML = name;
+  label.style.display = "none";
+
+  m.getElement().appendChild(label);
+
+  m.getElement().addEventListener("mouseenter", (evt) => {
+    label.style.display = "block";
+  });
+
+  m.getElement().addEventListener("mouseleave", (evt) => {
+    label.style.display = "none";
+  });
+
+  console.log("in here!!!");
+  console.log(m);
+
+  return m.setLngLat(coordinates);
+};

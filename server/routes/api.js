@@ -13,4 +13,15 @@ api.get("/", async (req, res, next) => {
   }
 });
 
+api.post("/", async (req, res, next) => {
+  try {
+    const data = req.body;
+    console.log(data);
+    await Landmark.create(data);
+  } catch (err) {
+    console.log("There was an issue creating a Landmark");
+    console.log(err);
+  }
+});
+
 module.exports = api;

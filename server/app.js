@@ -2,8 +2,7 @@ const path = require("path"),
   { db } = require("./models"),
   express = require("express"),
   morgan = require("morgan"),
-  PORT = 4747,
-  chalk = require("chalk"),
+  PORT = process.env.PORT || 4747,
   app = express(),
   api = require("./routes/api");
 
@@ -13,10 +12,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // serves our public assets
-app.use("/public", express.static(path.join(__dirname, "..", "/public")));
+app.use(express.static(path.join(__dirname, "..", "/public")));
 
 app.get("/", (req, res, next) => {
-  res.send("hi");
+  res.send("hello");
 });
 
 app.use("/api", api);

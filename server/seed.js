@@ -7,22 +7,45 @@ const Promise = require("bluebird"),
 
 const data = {
   landmark: [
-    { name: "Pomona College", coordinates: [-117.7119480755757, 34.0976] },
+    {
+      name: "Pomona College",
+      college: "Pomona College",
+      coordinates: [-117.712761, 34.097481],
+    },
     {
       name: "Pitzer College",
-      coordinates: [-117.70602599055117, 34.11267514895279],
+      college: "Pitzer College",
+      coordinates: [-117.705093, 34.104649],
     },
     {
       name: "Claremont McKenna College",
+      college: "Claremont McKenna College",
       coordinates: [-117.70653995627396, 34.10067005167589],
     },
     {
       name: "Harvey Mudd College",
+      college: "Harvey Mudd College",
       coordinates: [-117.70856800070845, 34.10601062920307],
     },
     {
       name: "Scripps College",
+      college: "Scripps College",
       coordinates: [-117.710013570021, 34.10389104574483],
+    },
+    {
+      name: "The SCC",
+      college: "Pomona College",
+      coordinates: [-117.71367906374799, 34.09951796352908],
+    },
+    {
+      name: "The Hive",
+      college: "Pomona College",
+      coordinates: [-117.7141, 34.10061],
+    },
+    {
+      name: "The Kravis Center",
+      college: "Claremont McKenna College",
+      coordinates: [-117.711342, 34.097618],
     },
   ],
 };
