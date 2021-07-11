@@ -7,7 +7,8 @@
     "start:dev": "npm run start-server & npm run build",
     "seed": "node server/seed.js",
     "start-server": "nodemon server/app.js --ignore public",
-    "build": "webpack -w",
+    "build": "webpack",
+    "build-watch": "webpack -w",
     "start": "npm run start:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
