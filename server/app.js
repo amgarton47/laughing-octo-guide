@@ -6,6 +6,8 @@ const path = require("path"),
   app = express(),
   api = require("./routes/api");
 
+const seed = require("./seed");
+
 // logging and body-parsing
 app.use(morgan("dev"));
 app.use(express.json());
@@ -36,6 +38,7 @@ app.use((err, req, res, next) => {
 const init = async () => {
   try {
     await db.sync();
+    seed();
   } catch (err) {
     console.error(err);
   }

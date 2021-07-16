@@ -74,9 +74,11 @@ async function seed() {
   } catch (err) {
     console.error("There was totally a problem", err, err.stack);
   } finally {
-    db.close(); // uses promises but does not return a promise.
+    // db.close(); // uses promises but does not return a promise.
     console.log("connection closed"); // the connection eventually closes, we just manually do so to end the process quickly
   }
 }
 
 seed();
+
+module.exports = seed;
