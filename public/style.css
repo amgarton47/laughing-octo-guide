@@ -12,6 +12,31 @@ h3 {
   text-align: center;
 }
 
+@media only screen and (max-width: 600px) {
+  .form-popup {
+    position: relative;
+    background-color: #a8c9dd;
+
+    /* float: inline-end; */
+  }
+  .popup-inner {
+    bottom: 0;
+    position: absolute;
+    background-color: #a8c9dd;
+  }
+
+  #map {
+    height: calc(50vh);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #app {
+    display: flex;
+    /* flex-direction: column-reverse; */
+  }
+}
+
 header {
   display: flex;
   align-items: center;
@@ -22,14 +47,10 @@ header {
   justify-content: center;
 }
 
-#app {
-  display: flex;
-}
-
 #map {
   height: calc(100vh - 3rem);
   width: 100vw;
-  flex: 2;
+  flex: 3;
   overflow: hidden;
 }
 
@@ -39,7 +60,7 @@ header {
 }
 
 .form-popup {
-  width: 400px;
+  width: 25%;
 }
 
 .popup-inner {
