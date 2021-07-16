@@ -27,8 +27,5 @@ export default (coordinates, college, name) => {
     label.style.display = "none";
   });
 
-  console.log("in here!!!");
-  console.log(m);
-
   return m.setLngLat(coordinates);
 };
