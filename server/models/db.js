@@ -7,7 +7,7 @@ if (process.env.DATABASE_URL) {
     protocol: "postgres",
     port: 5432,
     // host: "<heroku host>",
-    logging: true, //false
+    logging: false, //false
     dialectOptions: {
       ssl: { rejectUnauthorized: false },
     },

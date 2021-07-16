@@ -52,7 +52,7 @@ const data = {
 
 async function seed() {
   try {
-    await db.sync({ force: true });
+    await db.sync(/*{ force: true }*/);
     console.log(chalk.green("Dropped old data, now inserting seed data"));
 
     await Promise.map(Object.keys(data), async function (name) {
